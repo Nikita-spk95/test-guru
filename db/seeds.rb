@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
 Answer.destroy_all
 Question.destroy_all
 Test.destroy_all
@@ -20,43 +21,48 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  { title: 'Ruby beginner', level: 1, category_id: categories[0].id, author_id: users[0].id },
-  { title: 'Ruby advanced', level: 2, category_id: categories[0].id, author_id: users[0].id },
-  { title: 'JS beginner', level: 1, category_id: categories[1].id, author_id: users[0].id },
-  { title: 'JS advanced', level: 2, category_id: categories[1].id, author_id: users[0].id }
+  { title: 'Ruby beginner', level: 1, category: categories[0], author: users[0] },
+  { title: 'Ruby advanced', level: 2, category: categories[0], author: users[0] },
+  { title: 'JS beginner', level: 1, category: categories[1], author: users[0] },
+  { title: 'JS advanced', level: 2, category: categories[1], author: users[0] }
 ])
 
 questions = Question.create!([
-  { body: 'What are objects in Ruby?', test_id: tests[0].id },
-  { body: "What's difference between 'puts' 'print'?", test_id: tests[0].id },
-  { body: 'What is the difference between calling super and calling super()?', test_id: tests[1].id },
-  { body: 'What is React JS?', test_id: tests[2].id },
-  { body: 'Where you can use AWAIT operator?', test_id: tests[3].id }
+  { body: 'What are objects in Ruby?', test: tests[0] },
+  { body: "What's difference between 'puts' 'print'?", test: tests[0] },
+  { body: 'What is the difference between calling super and calling super()?', test: tests[1] },
+  { body: 'What is React JS?', test: tests[2] },
+  { body: 'Where you can use AWAIT operator?', test: tests[3] }
 ])
 
 Answer.create!([
-  { body: 'Everything in Ruby is an object.', correct: true, question_id: questions[0].id },
-  { body: 'There are no objects in ruby.', correct: false, question_id: questions[0].id },
-  { body: 'Only class instances.', correct: false, question_id: questions[0].id },
-  { body: 'Only strings.', correct: false, question_id: questions[0].id },
+  { body: 'Everything in Ruby is an object.', correct: true, question: questions[0] },
+  { body: 'There are no objects in ruby.', correct: false, question: questions[0] },
+  { body: 'Only class instances.', correct: false, question: questions[0] },
+  { body: 'Only strings.', correct: false, question: questions[0] },
 
-  { body: 'Same functions.', correct: false, question_id: questions[1].id },
-  { body: 'PUTS and PRINT same as P function', correct: false, question_id: questions[1].id },
-  { body: 'PUTS add a new line at the end, PRINT same line', correct: true, question_id: questions[1].id },
-  { body: 'PRINT add a new line at the end, PUTS same line', correct: false, question_id: questions[1].id },
+  { body: 'Same functions.', correct: false, question: questions[1] },
+  { body: 'PUTS and PRINT same as P function', correct: false, question: questions[1] },
+  { body: 'PUTS add a new line at the end, PRINT same line', correct: true, question: questions[1] },
+  { body: 'PRINT add a new line at the end, PUTS same line', correct: false, question: questions[1] }, 
 
   { body: 'No difference', correct: false, question_id: questions[2].id },
   { body: 'SUPER() - no arguments, SUPER - send all arguments passed to the function to parent.', correct: true, question_id: questions[2].id },
   { body: 'SUPER - no arguments, SUPER() - send all arguments passed to the function to parent.', correct: false, question_id: questions[2].id },
   { body: 'SUPER and SUPER() no arguments', correct: false, question_id: questions[2].id },
 
-  { body: 'Game framework', correct: false, question_id: questions[3].id },
-  { body: 'Backend library', correct: false, question_id: questions[3].id },
-  { body: 'Library for web and native user interfaces.', correct: true, question_id: questions[3].id },
-  { body: 'Machine learning framefork', correct: false, question_id: questions[3].id },
+  { body: 'Game framework', correct: false, question: questions[3] },
+  { body: 'Backend library', correct: false, question: questions[3] },
+  { body: 'Library for web and native user interfaces.', correct: true, question: questions[3] },
+  { body: 'Machine learning framefork', correct: false, question: questions[3] },
 
-  { body: 'An async function or at the top level of module.z', correct: true, question_id: questions[4].id },
-  { body: 'Just an async function', correct: false, question_id: questions[4].id },
-  { body: 'Just at the top level of module.z', correct: false, question_id: questions[4].id },
-  { body: 'Same as WARN()', correct: false, question_id: questions[4].id }
+  { body: 'An async function or at the top level of module.z', correct: true, question: questions[4] },
+  { body: 'Just an async function', correct: false, question: questions[4] },
+  { body: 'Just at the top level of module.z', correct: false, question: questions[4] },
+  { body: 'Same as WARN()', correct: false, question: questions[4] }
+])
+
+Result.create!([
+  { user: users[0], test: tests[0] },
+  { user: users[0], test: tests[1] }
 ])
