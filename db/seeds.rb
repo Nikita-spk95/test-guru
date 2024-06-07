@@ -22,9 +22,11 @@ categories = Category.create!([
 
 tests = Test.create!([
   { title: 'Ruby beginner', level: 1, category: categories[0], author: users[0] },
-  { title: 'Ruby advanced', level: 2, category: categories[0], author: users[0] },
+  { title: 'Ruby advanced', level: 3, category: categories[0], author: users[0] },
+  { title: 'Ruby pro', level: 5, category: categories[0], author: users[0] },
   { title: 'JS beginner', level: 1, category: categories[1], author: users[0] },
-  { title: 'JS advanced', level: 2, category: categories[1], author: users[0] }
+  { title: 'JS advanced', level: 4, category: categories[1], author: users[0] },
+  { title: 'JS pro', level: 15, category: categories[1], author: users[0] }
 ])
 
 questions = Question.create!([
