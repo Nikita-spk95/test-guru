@@ -1,0 +1,8 @@
+<h3>Question:</h3>
+
+<p><%= @question.body %></p>
+
+<p><%= link_to "Delete question", question_path(@question), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  }  %></p>

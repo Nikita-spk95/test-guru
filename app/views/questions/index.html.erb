@@ -1,0 +1,9 @@
+<h3>Test:</h3>
+
+<p><%= @test.title %></p>
+
+<h3>Questions:</h3>
+
+<% @test.questions.each do |q| %>
+  <p><%= q.id %>. <%= q.body %></p>
+<% end %>
