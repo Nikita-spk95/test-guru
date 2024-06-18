@@ -1,4 +1,4 @@
-class Result < ActiveRecord::Migration[6.1]
+class CreateResults < ActiveRecord::Migration[6.1]
   def change
     create_table :results do |t|
       t.references :test, null: false, foreign_key: true
