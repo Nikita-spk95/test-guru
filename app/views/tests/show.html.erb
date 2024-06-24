@@ -1,0 +1,19 @@
+<h3>Test:</h3>
+
+<p>Title: <%= @test.title %></p>
+<p>Level: <%= @test.level %></p>
+<p>Category id: <%= @test.category_id %></p>
+
+<h4>Questions:</h4>
+<% @test.questions.each_with_index do |q, i| %>
+<p><%= i + 1 %>. <%=q.body.capitalize %></p>
+<% end %>
+
+<p><%= link_to "Edit", edit_test_path %></p>
+<p><%= link_to "Delete test", test_path, data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  }  %></p>
+
+
+<p><%= link_to "Back", tests_path %></p>
