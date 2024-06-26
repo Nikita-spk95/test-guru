@@ -5,9 +5,11 @@
 <p>Category id: <%= @test.category_id %></p>
 
 <h4>Questions:</h4>
-<% @test.questions.each_with_index do |q, i| %>
-<p><%= i + 1 %>. <%=q.body.capitalize %></p>
-<% end %>
+<table>
+  <tbody>  
+    <%= render @questions %>
+  </tbody>
+</table>
 
 <p><%= link_to "Edit", edit_test_path %></p>
 <p><%= link_to "Delete test", test_path, data: {
