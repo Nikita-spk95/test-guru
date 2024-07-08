@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Result.destroy_all
+TestPassage.destroy_all
 Answer.destroy_all
 Question.destroy_all
 Test.destroy_all
@@ -64,7 +64,7 @@ Answer.create!([
   { body: 'Same as WARN()', correct: false, question: questions[4] }
 ])
 
-Result.create!([
-  { user: users[0], test: tests[0] },
-  { user: users[0], test: tests[1] }
+TestPassage.create!([
+  { user: users[0], test: tests[0], current_question: questions[0] },
+  { user: users[0], test: tests[1], current_question: questions[1] }
 ])
