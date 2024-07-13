@@ -11,6 +11,19 @@
   </head>
 
   <body>
+    <div class="logo">
+      <a href="<%= root_path %>">Test Guru</a>
+    </div>
+    
+    <% if user_signed_in? %>
+      <p class="nav user">
+          Welcome, <b><%= current_user.email %></b> Guru
+          <%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete} %>
+      </p>
+    <% end %>
+
+    <%= render 'shared/flash' %>
+
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>

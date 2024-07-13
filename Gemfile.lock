@@ -86,6 +86,7 @@ GEM
       activesupport (>= 6.1)
     i18n (1.14.4)
       concurrent-ruby (~> 1.0)
+    io-console (0.5.11)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -162,6 +163,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.9.0)
+      io-console (~> 0.5)
     rexml (3.2.6)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
@@ -183,7 +185,8 @@ GEM
     spring (4.2.0)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
-      rack (>= 2.2.4, < 4)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     sprockets-rails (3.4.2)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
@@ -225,8 +228,10 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
+  devise (~> 4.0)
   capybara (>= 3.26)
   jbuilder (~> 2.7)
+  letter_opener
   listen (~> 3.3)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
