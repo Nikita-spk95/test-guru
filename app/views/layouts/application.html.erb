@@ -11,6 +11,20 @@
   </head>
 
   <body>
+    <div class="logo">
+      <a href="<%= root_path %>">Test Guru</a>
+    </div>
+    <nav class="flex justify-between items-center">
+      <div class="nav user">
+        <% if logged_in? %>
+          <p>Welcome, <b><%= current_user.email %></b> Guru</p>
+          <p><%= link_to 'Exit', session_path(:user_id), data: {turbo_method: :delete} %></p>
+        <% else %>
+          <p><%= link_to "Logged in", login_path %></p>
+          <p><%= link_to "Sign in", signup_path %></p>
+        <% end %>
+      </div>
+    </nav>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>
