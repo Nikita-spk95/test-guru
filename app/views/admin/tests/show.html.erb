@@ -1,0 +1,15 @@
+<h3>Test:</h3>
+
+<p>Title: <%= @test.title %></p>
+<p>Level: <%= @test.level %></p>
+<p>Category id: <%= @test.category_id %></p>
+
+<h4>Questions:</h4>
+<%= link_to 'New question', new_admin_test_question_path(@test) %>
+
+<ol>
+  <%= render @test.questions %>
+</ol>
+
+<p><%= link_to "Edit test", edit_admin_test_path %></p>
+<p><%= link_to "Back", admin_tests_path %></p>
