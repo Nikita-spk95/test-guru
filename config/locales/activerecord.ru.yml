@@ -1,0 +1,29 @@
+ru:
+  activerecord:
+    models:
+      test: "Тест"
+      question: "Вопрос"
+      answer: "Ответ"
+      user: "Пользователь"
+      category: "Категория"
+
+    attributes:
+      test:
+        title: "Название"
+        category: "Категория"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Email"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        remember_me: "Запомнить"
+
+    errors:
+      messages:
+        blank: "не может быть пустым"
+        required: "должна быть выбрана"
+        invalid: "неверный формат"
+        confirmation: "отсутствует"
+        too_short: "должен содержать не менее 6 символов"
+

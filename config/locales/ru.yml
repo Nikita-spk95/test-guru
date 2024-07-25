@@ -1,2 +1,164 @@
 ru:
- hello: "Привет"
+  hello: "Привет!"
+
+  layouts:
+    application:
+      greeting: "Добро пожаловать"
+      logo: "Тест Гуру"
+      logout: "Выйти"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      user:
+        create: "Готово"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  tests:
+    index:
+      header: "Доступные тесты:"
+      title: "Название"
+      questions: "Вопросов"
+      level:  "Уровень"
+      category: "Категория" 
+      actions: "Действия"
+    test:
+      start: "Начать"
+    
+  test_passages:
+    show:
+      header: "Прохождение"
+      next: "Следующий вопрос"
+      question_number: "Номер текущего вопроса"
+      question_count: "Всего вопросов в тесте"
+    result:
+      header: "Тест %{title} успешно завершен!"
+      passed: "Вы прошли тест!"
+      failed: "Тест не пройден!"
+      move_back: "Вернуться к тестам"
+
+  admin:
+    nav:
+      admin_panel: "ТестГуру Административная Панель"
+      greeting: "Добро пожаловать"
+      logout: "Выйти"
+
+    tests:
+      index:
+        header: "Доступные тесты:"
+        title: "Название"
+        questions: "Вопросов"
+        level:  "Уровень"
+        category: "Категория" 
+        author: "Автор"
+        actions: "Действия"
+        new_test: "Создать новый тест"
+      show:
+        test_header: "Тест"
+        title: "Название"
+        level: "Уровень"
+        category_id: "ID категории"
+        questions_header: "Вопросы"
+        new_question: "Новый вопрос"
+        edit_test: "Редактировать тест"
+        back: "Назад"
+      new:
+        header: "Создать новый тест"
+        back: "Назад"
+      create:
+        success: "Тест успешно создан."
+      edit:
+        header: "Редактировать тест"
+        back: "Назад"
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+
+    questions:
+      question:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      new:
+        header: "Создать %{title} новый вопрос"
+        back: "Назад"
+      show:
+        question_header: "Вопрос"
+        answer_header: "Ответы"
+        new_answer: "Новый ответ"
+        edit: "Редактировать"
+        delete: "Удалить вопрос"
+        confirm: "Вы уверены?"
+        back: "Назад"
+      edit:
+        header: "Редактирование %{title} вопроса"
+        back: "Назад"
+    
+    answers:
+      new:
+        header: "Новый ответ"
+        back: "Вернуться к ответам"
+      show:
+        question_header: "Вопрос"
+        answer_header: "Ответ"
+        correct: "Верный ответ"
+        back: "Назад"
+      edit:
+        header: "Редактировать ответ"
+        back: "Вернуться к ответам"
+      show:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить ответ"
+        confirm: "Вы уверены?"
+        back: "Назад"
+
+  errors:
+    messages:
+      not_saved: 
+        one: "Обнаружена %{count} ошибка"
+        few: "Обнаружены %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        other: "Обнаружены %{count} ошибки"
+
+  devise:
+    registrations:
+      new: 
+        header: "Зарегистрироваться"
+        count_characters: "символов минимум"
+    sessions:
+      new:
+        header: "Войти на сайт"
+    shared:
+      links:
+        signup: "Зарегистрироваться"
+        login: "Войти"
+        forgot_your_password: "Забыли пароль?"
+        confirmation_instructions: "Не получил инструкций по подтверждению"
+        unlock_instructions: "Не получил инструкции по разблокировке"
+    confirmations:
+      new:
+        header: "Отправить инструкиции по подтверждению"
+        send: "Отправить"
+
+  test_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"

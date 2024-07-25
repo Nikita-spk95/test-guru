@@ -5,10 +5,10 @@
   <td><%= test.category.title %></td>
   <td><%= test.author.first_name %> <%= test.author.last_name %></td>
 
-  <td><%= link_to 'Show', admin_test_path(test) %></td>
-  <td><%= link_to 'Edit', edit_admin_test_path(test) %></td>
-  <td><%= link_to 'Delete', admin_test_path(test), data: {
+  <td><%= link_to t(".show"), admin_test_path(test) %></td>
+  <td><%= link_to t(".edit"), edit_admin_test_path(test) %></td>
+  <td><%= link_to t(".delete"), admin_test_path(test), data: {
                     turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
+                    turbo_confirm: t(".confirm")
                   } %></td>             
 </tr>

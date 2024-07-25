@@ -1,0 +1,23 @@
+en:
+  activerecord:
+    models:
+      test: "Test"
+      question: "Question"
+      answer: "Answer"
+      user: "User"
+      category: "Category"
+
+    attributes:
+      test:
+        title: "Title"
+        category: "Category"
+      user:
+        email: "Email"
+
+    errors:
+      messages:
+        blank: "can't be an empty"
+        required: "must be selected"
+        invalid: "invalid format"
+        confirmation: "is empty"
+        too_short: "must be at least 6 characters"

@@ -1,20 +1,20 @@
-<h3>Question:</h3>
+<h3><%= t(".question_header") %>:</h3>
 
 <p><%= @question.body %></p>
 
-<h2>Answers</h2>
+<h2><%= t(".answer_header") %></h2>
 
-<%= link_to 'New answer', new_admin_question_answer_path(@question) %>
+<%= link_to t(".new_answer"), new_admin_question_answer_path(@question) %>
 
 <ol>
   <%= render @question.answers %>
 </ol>
 
-<p><%= link_to "Edit", edit_admin_question_path(@question) %></p>
-<p><%= link_to "Delete question", admin_question_path(@question), data: {
+<p><%= link_to t(".edit"), edit_admin_question_path(@question) %></p>
+<p><%= link_to t(".delete"), admin_question_path(@question), data: {
                     turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
+                    turbo_confirm: t(".confirm")
                   }  %></p>
 
 
-<p><%= link_to "Back", admin_tests_path(@question.test) %></p>
+<p><%= link_to t(".back"), admin_tests_path(@question.test) %></p>
