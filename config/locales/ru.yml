@@ -1,12 +1,6 @@
 ru:
   hello: "Привет!"
 
-  layouts:
-    application:
-      greeting: "Добро пожаловать"
-      logo: "Тест Гуру"
-      logout: "Выйти"
-
   helpers:
     submit:
       test:
@@ -39,14 +33,15 @@ ru:
       question_number: "Номер текущего вопроса"
       question_count: "Всего вопросов в тесте"
     result:
-      header: "Тест %{title} успешно завершен!"
+      header: "Тест %{title} завершен!"
       passed: "Вы прошли тест!"
       failed: "Тест не пройден!"
       move_back: "Вернуться к тестам"
 
   admin:
     nav:
-      admin_panel: "ТестГуру Административная Панель"
+      logo: "ТестГуру"
+      admin_panel: "Административная панель"
       greeting: "Добро пожаловать"
       logout: "Выйти"
 
@@ -139,6 +134,9 @@ ru:
     sessions:
       new:
         header: "Войти на сайт"
+        enter_email: "Введите e-mail"
+        remember_me: "Запомнить меня"
+        enter: "Войти"
     shared:
       links:
         signup: "Зарегистрироваться"
@@ -162,3 +160,15 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    nav:
+      greeting: "Добро пожаловать"
+      logo: "ТестГуру"
+      admin_panel: "Административная панель"
+      logout: "Выйти"
+      signup: "Зарегистрироваться"
+      login: "Войти"
+
+  users:
+    sessions:
+      create:
+        hello: "Привет!"
