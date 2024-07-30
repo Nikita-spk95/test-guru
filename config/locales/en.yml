@@ -32,12 +32,6 @@
 en:
   hello: "Hello world"
 
-  layouts:
-    application:
-      greeting: "Welcome"
-      logo: "Test Guru"
-      logout: "Logout"
-
   helpers:
     submit:
       test:
@@ -76,7 +70,8 @@ en:
 
   admin:
     nav:
-      admin_panel: "TestGuru Admin Panel"
+      logo: "TestGuru"
+      admin_panel: "Admin panel"
       logout: "Logout"
 
     tests:
@@ -166,6 +161,9 @@ en:
     sessions:
       new:
         header: "Enter"
+        enter_email: "Enter e-mail"
+        remember_me: "Remember me"
+        enter: "Enter"
     shared:
       links:
         signup: "Registration"
@@ -187,3 +185,15 @@ en:
       header:
         one: "%{count} error detected"
         other: "${count} errors detected"
+    nav:
+      greeting: "Welcome"
+      logo: "TestGuru"
+      admin_panel: "Admin panel"
+      logout: "Exit"
+      signup: "Sign up"
+      login: "Log in"
+  
+  users:
+    sessions:
+      create:
+        hello: "Hello!"
