@@ -1,11 +1,11 @@
 <div class="fw-normal">
   <h1><%= t('.header')%> <%= @test_passage.test.title %>Test</h1>
 
-  <b>
-    <%= @test_passage.current_question.body %> 
-  </b>
+  <p>
+    <b><%= @test_passage.current_question.body %></b>
+  </p>
 
-  <%= form_with url: test_passage_path(@test_passage), local: true, data: { turbo: false }, method: :put do |form| %>
+  <%= form_with url: test_passage_path(@test_passage), local: false, data: { turbo: false }, method: :put do |form| %>
     <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
       <p>  
         <%= b.check_box id: "answer_ids_#{b.object.id}" %>
@@ -13,9 +13,11 @@
       </p>
     <% end %>
 
+    
     <p><%= form.submit t(".next") %></p>
 
     <p><%= t(".question_number") %>: <%= @test_passage.question_number %></p>
     <p><%= t(".question_count") %>: <%= @test_passage.questions_count %>
   <% end %>
+  <p><%= link_to t(".gist_question"), gists_path(test_passage: @test_passage), data: { turbo_method: :post } %></p>
 </div>

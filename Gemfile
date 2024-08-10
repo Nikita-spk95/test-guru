@@ -43,7 +43,13 @@ gem 'rails-i18n', '~> 7.0.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.3.3'
 
+# API
+gem "octokit", '~> 8.1.0'
+
 group :development, :test do
+  # Shim to load environment variables from .env
+  gem 'dotenv-rails'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

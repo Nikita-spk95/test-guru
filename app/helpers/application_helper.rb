@@ -7,6 +7,10 @@ module ApplicationHelper
     link_to 'Github', "https://github.com/#{author}/#{repo}", :target => "_blank", :rel => "noopener noreferrer"
   end
 
+  def gist_url(gist_url)
+    link_to "#{URI(gist_url).path}", "#{gist_url}", :target => "_blank", :rel => "noopener noreferrer"
+  end
+
   def flash_message
     content_tag :div, class: "flash-messages" do
       flash.map do |key, value| 
