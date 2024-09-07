@@ -1,7 +1,11 @@
 <h3><%= t('.header') %></h3>
-<table>
+<table class="table">
   <tr>
-    <th><%= t('.title') %></th>
+    <th class="sort-by-title pointer">
+      <%= t('.title') %>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
     <th><%= t('.questions') %></th>
     <th><%= t('.level') %></th>
     <th><%= t('.category') %></th>
